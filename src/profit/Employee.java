@@ -5,7 +5,6 @@ public class Employee {
 	public String emp_id;
 	
 	public Employee(String name, String emp_id) {
-		super();
 		this.name = name;
 		this.emp_id = emp_id;
 	}

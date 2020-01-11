@@ -5,7 +5,6 @@ public class Salary {
 	public double commission;
 	
 	public Salary(double salary, double commission) {
-		super();
 		this.salary = salary;
 		this.commission = commission;
 	}
