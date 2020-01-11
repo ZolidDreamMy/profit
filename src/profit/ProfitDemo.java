@@ -1,30 +1,51 @@
-package profit;
+//package profit;
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class ProfitDemo {
 
 	public static void main(String[] args) {
-		int id;
-		char name;
-		double salary,sumofsalary,profit,commission;
+		String id;
+		String name;
+		int i = 0;
+		double salary,sales,profits = 0,commission,sum=0 ;
 		Scanner sc = new Scanner(System.in);
-		id = sc.nextInt();
-		name = sc.next().charAt(0);
-		salary = sc.nextDouble();
-		sumofsalary = sc.nextDouble();
-		commission = sc.nextDouble();
-		
-		Employee em = new Employee();
-		em = new Employee("Suwijak",61113858);
-		System.out.println(em.toString());
-		if(salary<25000) {
-			profit = (0.01*sumofsalary); 
-		}else if(salary >= 25001 && salary <= 50000) {
-			profit = (0.02*sumofsalary);
-		}else if (salary >50000) {
-			profit = (0.03*sumofsalary);
+		ArrayList<Employee> em = new ArrayList<Employee>();
+		ArrayList<Salary> sa = new ArrayList<Salary>();
+		char ch = 0;
+		do {
+			System.out.print("Name :");
+			name = sc.next();
+			System.out.print("ID : ");
+			id = sc.next();
+			System.out.print("Salary :");
+			salary = sc.nextDouble();
+			System.out.print("Top sale :");
+			sales = sc.nextDouble();
+			
+			em.add( new Employee(name, id));
+			
+			if(sales<25000) {
+				profits = (0.01*sales);
+				sum = profits+salary;
+				sa.add(new Salary(salary,sum));
+			}else if(sales >= 25001 && sales <= 50000) {
+				profits = (0.02*sales);
+				sum = profits+salary;
+				sa.add(new Salary(salary,sum));
+			}else if (sales >50000) {
+				profits = (0.03*sales);
+				sum = profits+salary;
+				sa.add(new Salary(salary,sum));
+			}
+			System.out.print("Do you want to continues[y/n]: ");
+			
+			ch = sc.next().charAt(0);
+		}while(ch=='y');
+		for( i=0;i<em.size();i++) {
+			System.out.println(em.get(i).toString()	);
+			System.out.println("Salary received :"+sa.get(i).getSalary());
 		}
-		
 
 	}
 

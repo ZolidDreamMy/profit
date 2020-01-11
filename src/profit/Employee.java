@@ -1,8 +1,9 @@
-package profit;
+//package profit;
 
 public class Employee {
 	public String name;
 	public String emp_id;
+	public Salary salary;
 	
 	public Employee(String name, String emp_id) {
 		this.name = name;
@@ -27,8 +28,15 @@ public class Employee {
 
 	@Override
 	public String toString() {
-		return "Employee [name=" + name + ", emp_id=" + emp_id + "]";
+		return "Employee name" + name + ", ID " + emp_id  ;
 	}
-	
+	public Salary getSalary () {
+		return salary;
+		
+	}
+	public void setSalary (Salary salary) {
+		this.salary = salary;
+		
+	}
 
 }
