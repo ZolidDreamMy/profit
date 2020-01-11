@@ -25,15 +25,15 @@ public class ProfitDemo {
 			
 			em.add( new Employee(name, id));
 			
-			if(sales<25000) {
+			if(sales<50000) {
 				profits = (0.01*sales);
 				sum = profits+salary;
 				sa.add(new Salary(salary,profits));
-			}else if(sales >= 25001 && sales <= 50000) {
+			}else if(sales >= 50001 && sales <= 100000) {
 				profits = (0.02*sales);
 				sum = profits+salary;
 				sa.add(new Salary(salary,profits));
-			}else if (sales >50000) {
+			}else if (sales >100001) {
 				profits = (0.03*sales);
 				sum = profits+salary;
 				sa.add(new Salary(salary,profits));
