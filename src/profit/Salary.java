@@ -13,16 +13,6 @@ public class Salary {
 		return salary;
 	}
 	
-	public double checkSalary() {
-		double sum = salary+commission;
-		if (sum<18000) {
-			
-			return 18000;
-		}
-		return sum;
-
-	}
-
 	public void setSalary(double salary) {
 		this.salary = salary;
 	}

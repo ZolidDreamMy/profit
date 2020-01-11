@@ -37,7 +37,7 @@ public class ProfitDemo {
 					sa.add(new Salary(salary,profits));
 				}else if (sales >100001) {
 					profits = (0.03*sales);
-					sum = profits+salary;
+					sum = profits+salary+3000;
 					sa.add(new Salary(salary,profits));
 				}
 				
@@ -66,7 +66,7 @@ public class ProfitDemo {
 		}while(ch=='y');
 		for( i=0;i<em.size();i++) {
 			System.out.println(em.get(i).toString()	);
-			System.out.println("Salary received : "+sa.get(i).checkSalary());
+			System.out.println("Salary received : "+sa.get(i).getSalary());
 		}
 
 	}
