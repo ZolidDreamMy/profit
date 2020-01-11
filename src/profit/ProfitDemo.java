@@ -1,4 +1,4 @@
-//package profit;
+package profit;
 import java.util.Scanner;
 import java.util.ArrayList;
 
@@ -28,23 +28,27 @@ public class ProfitDemo {
 			if(sales<25000) {
 				profits = (0.01*sales);
 				sum = profits+salary;
-				sa.add(new Salary(salary,sum));
+				sa.add(new Salary(salary,profits));
 			}else if(sales >= 25001 && sales <= 50000) {
 				profits = (0.02*sales);
 				sum = profits+salary;
-				sa.add(new Salary(salary,sum));
+				sa.add(new Salary(salary,profits));
 			}else if (sales >50000) {
 				profits = (0.03*sales);
 				sum = profits+salary;
-				sa.add(new Salary(salary,sum));
+				sa.add(new Salary(salary,profits));
 			}
+			
+			
+			
+			
 			System.out.print("Do you want to continues[y/n]: ");
 			
 			ch = sc.next().charAt(0);
 		}while(ch=='y');
 		for( i=0;i<em.size();i++) {
 			System.out.println(em.get(i).toString()	);
-			System.out.println("Salary received :"+sa.get(i).getSalary());
+			System.out.println("Salary received : "+sa.get(i).checkSalary());
 		}
 
 	}
