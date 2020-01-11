@@ -2,11 +2,6 @@ package profit;
 
 public class Salary {
 	public double salary;
-	@Override
-	public String toString() {
-		return "Salary [salary=" + salary + ", commission=" + commission + "]";
-	}
-
 	public double commission;
 	
 	public Salary(double salary, double commission) {
@@ -30,5 +25,9 @@ public class Salary {
 	public void setCommission(double commission) {
 		this.commission = commission;
 	}
+	public String toString() {
+		return "Salary [salary=" + salary + ", commission=" + commission + "]";
+	}
+
 
 }
