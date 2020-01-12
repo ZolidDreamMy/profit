@@ -1,4 +1,4 @@
-package profit;
+//package profit;
 import java.util.Scanner;
 import java.util.ArrayList;
 
@@ -57,7 +57,7 @@ public class ProfitDemo {
 		}while(ch=='y');
 		for( i=0;i<em.size();i++) {
 			System.out.println(em.get(i).toString()	);
-			System.out.println("Salary received : "+sa.get(i).checkSalary());
+			System.out.println("Salary received : "+sa.get(i).checkSalary(sales));
 		}
 
 	}
