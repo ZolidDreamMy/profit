@@ -1,4 +1,4 @@
-//package profit;
+package profit;
 
 public class Employee {
 	public String name;
