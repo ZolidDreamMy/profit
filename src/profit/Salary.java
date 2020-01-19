@@ -1,28 +1,37 @@
-//package profit;
+package profit;
 
 public class Salary {
 	public double salary;
+	public double sum;
 	public double commission;
 	
 	public Salary(double salary, double commission) {
 		this.salary = salary;
 		this.commission = commission;
+		setSum();
 	}
 
 	public double getSalary() {
 		return salary;
 	}
+
+	public  void setSum() {
+		this.sum= salary+commission;
+	}
 	
+	public double getSum() {
+		return sum;
+	}
 	public double checkSalary(double a) {
 		
-		if (getSalary()<15000 ) {
-			if (a>100001)
-			return salary+3000;
-			else if (a<100001)
-				return salary;
+		if (a >100001) {
+			if(salary<15000)
+				return getSum()+3000;
 		}
-			return getSalary()+commission;
-		}
+				return getSum();
+	}
+	
+
 
 	public void setSalary(double salary) {
 		this.salary = salary;
